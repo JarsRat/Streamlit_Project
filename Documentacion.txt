@@ -1,0 +1,106 @@
+# Documentación: Dashboard de Análisis de E-commerce
+
+## Descripción General
+Esta aplicación es un dashboard interactivo desarrollado con Streamlit que proporciona análisis detallado de datos de e-commerce, incluyendo predicciones de retrasos en entregas y solicitudes de devolución, así como análisis de sentimientos de comentarios de clientes.
+
+## Tecnologías Utilizadas
+
+### Principales Frameworks y Bibliotecas
+- **Streamlit**: Framework principal para la creación del dashboard interactivo
+- **Pandas**: Manipulación y análisis de datos
+- **NumPy**: Operaciones numéricas y matemáticas
+- **Seaborn y Matplotlib**: Visualización de datos
+- **Scikit-learn**: Modelos de machine learning (implícito en los modelos guardados)
+- **Transformers (Hugging Face)**: Análisis de sentimientos mediante BERT
+- **Kagglehub**: Descarga de datasets de Kaggle
+- **Joblib**: Carga de modelos pre-entrenados
+
+## Estructura y Funcionalidades
+
+### 1. Carga y Preprocesamiento de Datos
+- Utiliza caché de Streamlit para optimizar el rendimiento
+- Carga datos desde Kaggle
+- Realiza limpieza y transformación de datos
+- Integra análisis de sentimientos
+
+### 2. Análisis de Sentimientos
+- Utiliza un modelo BERT multilingüe para analizar comentarios
+- Implementa sistema de caché para optimizar el rendimiento
+- Categoriza sentimientos en Positivo, Neutral y Negativo
+
+### 3. Secciones Principales del Dashboard
+
+#### a) Análisis Temporal
+- Visualización de distribución de pedidos por hora
+- Análisis de retrasos según hora del día
+
+#### b) KPIs por Plataforma
+- Tiempo promedio de entrega
+- Rating promedio de servicio
+- Porcentaje de insatisfacción
+- Porcentaje de retrasos
+
+#### c) Análisis de Correlaciones
+- Correlación entre tiempo de entrega y calificación
+- Visualizaciones mediante gráficos de dispersión
+
+#### d) Análisis de Categorías y Devoluciones
+- Tasas de devolución por categoría de producto
+- Estadísticas detalladas por categoría
+
+#### e) Análisis Original
+- Distribución de categorías de productos
+- Ratings por plataforma
+- Análisis de sentimientos por plataforma
+
+#### f) Distribuciones
+- Análisis estadístico de variables clave
+- Métricas descriptivas de tiempos de entrega
+
+### 4. Sistema de Predicción
+- Modelos pre-entrenados para predicción de:
+  - Retrasos en entregas
+  - Probabilidad de devoluciones
+- Utiliza encoders y scalers para preparar datos
+- Interface interactiva para predicciones en tiempo real
+
+### 5. Métricas de Rendimiento
+- Evaluación detallada de modelos predictivos
+- Métricas clave:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-Score
+
+## Características Técnicas Destacadas
+
+### Optimización de Rendimiento
+- Uso extensivo de caché mediante @st.cache_data y @st.cache_resource
+- Sistema de caché para predicciones de sentimientos
+- Procesamiento eficiente de datos
+
+### Interfaz de Usuario
+- Diseño responsivo con layout "wide"
+- Sistema de pestañas para organizar contenido
+- Filtros interactivos para análisis personalizado
+- Formularios para predicciones en tiempo real
+
+### Visualización de Datos
+- Gráficos interactivos con Seaborn y Matplotlib
+- Múltiples tipos de visualizaciones:
+  - Gráficos de barras
+  - Gráficos de dispersión
+  - Histogramas
+  - Gráficos apilados
+
+## Requisitos del Sistema
+- Python 3.7+
+- Dependencias listadas en el código
+- Acceso a Internet para carga de datos
+- Modelos pre-entrenados en directorio local
+
+## Consideraciones de Implementación
+- Los modelos deben estar pre-entrenados y guardados en el directorio 'model_cache'
+- Requiere conexión a Kaggle para la descarga inicial de datos
+- Sistema de caché para optimizar análisis de sentimientos
+- Manejo de errores para carga de datos y predicciones 
