@@ -22,8 +22,8 @@ This project is an interactive analytics dashboard built with Streamlit that pro
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
-cd [repository-name]
+git clone https://github.com/JarsRat/Streamlit_Project.git
+cd Streamlit_Project
 ```
 
 2. Create a virtual environment (recommended):
@@ -89,7 +89,7 @@ streamlit run streamlit_app.py
 Feel free to submit issues and enhancement requests!
 
 ## License
-[Your License Here]
+MIT License - This project is open source and available for free use, modification, and distribution.
 
 ## Contact
-[Your Contact Information] 
+John Silva - johnsilva11031@gmail.com 
